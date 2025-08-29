@@ -1,5 +1,5 @@
 # UIT-CARRACING
-Tài liệu UIT CARRACING
+
 Test.py: là file được cải tiến từ sample code của ban tổ chức
 - Chạy khá chậm
 - Có độ cân bằng nhất định tuy nhiên hơi lắc ở khúc đường thẳng
