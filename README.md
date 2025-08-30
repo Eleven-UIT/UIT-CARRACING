@@ -14,3 +14,13 @@ UpdateMidLane.py
 - Bám lane giữa
 - Độ ổn định rất cao
 - Tốc độ ~20
+
+UpdateLeftLane.py
+- Bám lane trái
+- Độ ổn định khá
+- Tốc độ ~27
+
+UpdateRightLaneV2.py
+- Bám lane phải
+- Độ ổn định khá
+- Tốc độ ~36
