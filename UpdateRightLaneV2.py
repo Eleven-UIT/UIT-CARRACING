@@ -7,9 +7,10 @@ import time
 class Config:
     UPPER_CHECKPOINT = 150
     MID_CHECKPOINT = 130
-    LOWER_CHECKPOINT = 110
-    MAX_STEERING_ANGLE = 30
-    SLOW_DOWN_ANGLE = 15
+    LOWER_CHECKPOINT = 120
+
+    MAX_STEERING_ANGLE = 25
+    SLOW_DOWN_ANGLE = 17
     MAX_VEHICLE_SPEED = 38
     MIN_VEHICLE_SPEED = 1
     WHITE_PIXEL_VALUE = 255
@@ -36,7 +37,7 @@ class PIDController:
         return output
 
 # Khởi tạo PID controller
-pid_controller = PIDController(1.3, 0.015, 0.35)
+pid_controller = PIDController(1.2, 0.005, 0.45)
 
 def process_image(image):
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -58,7 +59,7 @@ def find_line_centers(image, checkpoints):
     return centers
 
 def calculate_weighted_slope(center_positions, image_width, image_height):
-    weights = [0.5, 0.3, 0.2]  # Trọng số cho các checkpoint
+    weights = [0.5, 0.35, 0.25]  # Trọng số cho các checkpoint
     weighted_slopes = []
     midpoint = int(image_width / 2)
 
@@ -84,7 +85,7 @@ def compute_steering_angle(image):
 
 def compute_vehicle_speed(steering_angle, last_angle):
     if abs(steering_angle - last_angle) > Config.SLOW_DOWN_ANGLE:
-        return Config.MIN_VEHICLE_SPEED
+        return max(Config.MIN_VEHICLE_SPEED + 4, Config.MAX_VEHICLE_SPEED * 0.25)
     adjusted_speed = Config.MAX_VEHICLE_SPEED - abs(steering_angle) * (Config.MAX_VEHICLE_SPEED - Config.MIN_VEHICLE_SPEED) / Config.MAX_STEERING_ANGLE
     return max(Config.MIN_VEHICLE_SPEED, adjusted_speed)
 
