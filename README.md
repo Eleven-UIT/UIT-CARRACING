@@ -23,4 +23,4 @@ UpdateLeftLane.py
 Final.py
 - Bám lane phải
 - Độ ổn định ok
-- Tốc độ ~40 ( Ôm cua gắt hạ xuống thấp nhất là 20 )
+- Tốc độ ~40 ( Ôm cua gắt hạ xuống thấp nhất là 30 )
