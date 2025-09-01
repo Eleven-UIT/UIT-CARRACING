@@ -9,9 +9,9 @@ class Config:
     MID_CHECKPOINT = 130
     LOWER_CHECKPOINT = 120
 
-    MAX_STEERING_ANGLE = 25
+    MAX_STEERING_ANGLE = 30
     SLOW_DOWN_ANGLE = 17
-    MAX_VEHICLE_SPEED = 38
+    MAX_VEHICLE_SPEED = 40
     MIN_VEHICLE_SPEED = 1
     WHITE_PIXEL_VALUE = 255
     CENTER_BIAS = 0.58
@@ -59,7 +59,7 @@ def find_line_centers(image, checkpoints):
     return centers
 
 def calculate_weighted_slope(center_positions, image_width, image_height):
-    weights = [0.5, 0.35, 0.25]  # Trọng số cho các checkpoint
+    weights = [0.5, 0.4, 0.3]  # Trọng số cho các checkpoint
     weighted_slopes = []
     midpoint = int(image_width / 2)
 
