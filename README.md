@@ -1,26 +1,13 @@
-# UIT-CARRACING
+# UIT Car Racing 2024 – Professional Category
 
-Test.py: là file được cải tiến từ sample code của ban tổ chức
-- Chạy khá chậm
-- Có độ cân bằng nhất định tuy nhiên hơi lắc ở khúc đường thẳng
-- Tốc độ ~22
-  
-UpdateRightLane.py
-- Bám lane phải
-- Độ ổn định rất cao
-- Tốc độ ~28
+**Third Prize | 4-member team**
 
-UpdateMidLane.py
-- Bám lane giữa
-- Độ ổn định rất cao
-- Tốc độ ~20
+Autonomous racing vehicle project developed for **UIT Car Racing 2024 – Professional Category**.  
+The system combined computer-vision-based perception with lane-following and steering control for the online autonomous-driving rounds.
 
-UpdateLeftLane.py
-- Bám lane trái
-- Độ ổn định khá
-- Tốc độ ~27
+## My Contribution
 
-Final.py
-- Bám lane phải
-- Độ ổn định ok
-- Tốc độ ~40 ( Ôm cua gắt hạ xuống thấp nhất là 30 )
+- Prepared and labelled image data for the perception pipeline.
+- Trained a YOLO-based perception model for the online autonomous-driving rounds.
+- Contributed to the lane-following controller using Python and OpenCV.
+- Supported testing and tuning for sharp and 90-degree turns.
